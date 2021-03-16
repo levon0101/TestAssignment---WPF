@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ProgramA.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastFilePathA" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastFilePathB" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MutexNameA" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TestAssignmentA</Value>
+    </Setting>
+    <Setting Name="MutexNameB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TestAssignmentB</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,77 @@
+﻿<Window x:Class="ProgramA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgramA"
+        mc:Ignorable="d"
+        Title="Program A" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="File Path A"
+                       Margin="10,10,0,0"/>
+            <TextBox Text="{Binding FilePathA}" 
+                     MinHeight="25"
+                     Margin="10,0,10,0"/>
+
+            <TextBlock Text="File Path B"
+                       Margin="10,10,0,0"/>
+            <TextBox Text="{Binding FilePathB}"
+                     MinHeight="25"
+                     Margin="10,0,10,0"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding RunCommand}"
+                        Content="Run"
+                        MinWidth="100"  
+                        Margin="10"/>
+                <Button  Command="{Binding StopCommand}"
+                         Content="Stop" 
+                         MinWidth="100"  
+                         Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Text="A" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Grid.Column="1" Text="B" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            <ListBox ItemsSource="{Binding HandsA}"
+                          Grid.Row="1" 
+                          Margin="20">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding}" Margin="3" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <ListBox ItemsSource="{Binding HandsB}"
+                     Grid.Row="1" 
+                     Grid.Column="1"
+                     Margin="20">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding}"  Margin="3" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Window>
